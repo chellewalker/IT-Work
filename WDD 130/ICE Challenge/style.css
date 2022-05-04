@@ -1,0 +1,65 @@
+body {
+  background-color: pink;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: Arial;
+}
+
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px
+}
+
+li {
+  font-size: small;
+  font-family: Arial;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.sec1 {
+  font-size: x-small;
+  font-family: Arial;
+  color: white;
+}
+
+.sec2 {
+  font-weight: bolder;
+  font-size: small;
+  font-family: Arial;
+  color: white;
+}
+
+.sec3{
+  font-weight: bolder;
+  font-size: small;
+  font-family: Arial;
+  color: black;
+}
+
+.sec4{
+  font-family: 'Playfair Display';
+  font-size: xx-large;
+  color: white;
+}
+
+.sec5{
+  line-height: 90%;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: smaller;
+  color: black;
+}
