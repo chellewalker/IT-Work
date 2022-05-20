@@ -1,0 +1,44 @@
+#top {
+    border: 20px solid red;
+    padding: 1%;
+    margin: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: red;
+    text-align: center;
+}
+
+#middle {
+    border: 20px solid blue;
+    padding: 2%;
+    margin: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: blue;
+    text-align: center;
+}
+
+#bottom {
+    border: 20px solid green;
+    padding: 3%;
+    margin: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: green;
+    text-align: center;
+}
+
+#block1 {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    margin-left: 10%;
+}
+
+#block2 {
+    background-color: yellow;
+    margin: -9.5%;
+    height: 100px;
+    width: 100px;
+    margin-left: 82%;    
+}
