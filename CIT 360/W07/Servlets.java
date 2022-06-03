@@ -2,28 +2,33 @@ package Servlets;
     import javax.servlet.*;
     import java.io.*;
 
-@WebServlet(name = "Servlet", urlPatterns={"/Servlet"})
-public class Servlet extends HttpServlet {
+@WebServlet(name = "Servlets", urlPatterns={"/Servlets"})
+public class Servlets extends HttpServlet {
 
-    /** this is the main method that uses the two parameters and displays them. */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    //Correct Credentials
+    protected void cLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
         out.println("<html><head></head><body>");
-        String login = request.getParameter("login");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
-        out.println("<h1>Super Secret Login Information</h1>");
-        out.println("<p>Login: " + login + "</p>");
+
+        out.println("<h1>Login Information</h1>");
+        out.println("<p>The following details your current credentials.</p>");
+        out.println("<p>Username: " + username + "</p>");
         out.println("<p>Password: " + password + "</p>");
+        out.println("<h2>NOTICE: Your password must be changed immediately after the use of this page.</h2>");
         out.println("</body></html>");
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    //Invailid Credentials
+    protected void iLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("This resource is not available directly.");
+        out.println("Invailid credentials. Check entry for spelling or contact IT Support.");
     }
 
 }
