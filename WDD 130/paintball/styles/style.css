@@ -104,23 +104,27 @@ p.colored {
   background-color: #F0544F;
   color: #3A3335;
 }
-
 nav {
   background-color: #C6D8D3;
-  line-height: 3em;
+  line-height: 75px;
   text-align: center;
   font-size: 1.2em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
 }
-nav  {
-  list-style-type: none;
-  display: flex;
-
+.up nav {
+  background-color: #C6D8D3;
+  line-height: 75px;
+  text-align: center;
+  font-size: 1.2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 nav a {
-  padding:1em;
+  padding:10px;
   min-width: 120px;
   text-decoration: none;
-
 }
 nav a:link, nav a:visited {
   color: #3A3335;
