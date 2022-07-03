@@ -12,11 +12,10 @@ public class DoingShopping {
 
 try (//two people do 3 vs, puts out winner
     Scanner scan = new Scanner(System.in)) {
-        System.out.println("Name of fighter #1");
-        String name1 = scan.nextLine();
 
-        System.out.println("Name of fighter #2");
-        String name2 = scan.nextLine();   
+        System.out.println("Enter item to shopping list:");
+        String name1 = scan.nextLine();
+ 
         Random random = new Random();
 
 
