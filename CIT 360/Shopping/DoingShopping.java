@@ -9,17 +9,21 @@ public class DoingShopping {
         ExecutorService myService = Executors.newFixedThreadPool(3);
         String victor;
         int record;
+        List list = new ArrayList();
 
-try (//two people do 3 vs, puts out winner
+try (
     Scanner scan = new Scanner(System.in)) {
 
         System.out.println("Enter item to shopping list:");
-        String name1 = scan.nextLine();
+
+        while (list.get(list.size() - 1) != null) {
+            list.add(scan.nextLine());
+        }
  
         Random random = new Random();
 
 
-        Shopping ds1 = new Shopping(name1, random.nextInt(100));
+        Shopping ds1 = new Shopping(list, random.nextInt(100));
 
             myService.execute(ds1);
 

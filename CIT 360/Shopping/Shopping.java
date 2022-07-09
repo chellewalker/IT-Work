@@ -2,18 +2,20 @@ public class Shopping implements Runnable {
 
     private String item;
     private int endurance;
+    private List list;
 
-    public Shopping(String name, int endurance) {
-
-        this.item = item;
+    public Shopping(List list, int endurance) {
         this.endurance = endurance;
     }
 
     public void run() {
         System.out.println("\n\nExecuting with these parameters: Name =" + item + " Enduance = " + endurance + "\n\n");
-        for (int count = 1; count < endurance; count++) {
-            if (count % 15 == 0) {
-                System.out.println("Checking for next item...");
+        for (Object str : list) {
+            item = (String)str;
+            int count = 1;
+            count++;
+            if (count % 8 == 0) {
+                System.out.println(item);
                 try {
                     Thread.sleep(endurance);
                 } catch (InterruptedException e) {
@@ -21,7 +23,8 @@ public class Shopping implements Runnable {
                 }
                 
             }
+            else {
+                System.out.println("Checking for next item...");
+            }
         }
-        System.out.println(item);
-    }
-}
+    }}
