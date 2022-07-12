@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="hibernatejar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/hibernatejar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/hibernatejar" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/hibernate-core-5.3.1.Final-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/hibernatejar" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/hibernatejar" recursive="false" type="SOURCES" />
+  </library>
+</component>

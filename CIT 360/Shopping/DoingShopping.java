@@ -7,8 +7,8 @@ public class DoingShopping {
     public static void main(String[] args) {
 
         ExecutorService myService = Executors.newFixedThreadPool(3);
-        String victor;
-        int record;
+        String check = null;
+        int count = 1;
         List list = new ArrayList();
 
 try (
@@ -16,11 +16,19 @@ try (
 
         System.out.println("Enter item to shopping list:");
 
-        while (list.get(list.size() - 1) != null) {
+    list.add(scan.nextLine());
+
+    while (check != null) {
+            count++;
             list.add(scan.nextLine());
+            check = list.get(count);
         }
- 
-        Random random = new Random();
+
+        if (list.get(list.size() - 1) == null) {
+            System.out.println("List cancelled.");
+        }
+        else {
+    Random random = new Random();
 
 
         Shopping ds1 = new Shopping(list, random.nextInt(100));
@@ -28,7 +36,7 @@ try (
             myService.execute(ds1);
 
         System.out.println("List complete.");
-    }
+    }}
 
     myService.shutdown();
     }

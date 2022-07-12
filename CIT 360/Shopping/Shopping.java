@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Shopping implements Runnable {
 
     private String item;
@@ -9,7 +11,7 @@ public class Shopping implements Runnable {
     }
 
     public void run() {
-        System.out.println("\n\nExecuting with these parameters: Name =" + item + " Enduance = " + endurance + "\n\n");
+        System.out.println("\n\nExecuting with these parameters: Name =" + item + " Endurance = " + endurance + "\n\n");
         for (Object str : list) {
             item = (String)str;
             int count = 1;
