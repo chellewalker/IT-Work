@@ -6,8 +6,6 @@ public class Shopping implements Runnable {
     private int endurance;
     private List list;
 
-    private String empty;
-
     public Shopping(List list, int endurance) {
         this.endurance = endurance;
         this.list = list;
