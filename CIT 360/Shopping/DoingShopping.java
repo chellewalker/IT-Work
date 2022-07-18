@@ -30,12 +30,19 @@ try (
         else {
     Random random = new Random();
 
+    int count2 = 1;
 
 
-        Shopping ds = new Shopping(list, random.nextInt(100));
+            for (Object str : list) {
+                String item;
+                item = (String)str;
+                Shopping ds = new Shopping(item, random.nextInt(20));
 
             myService.execute(ds);
-    }}
+                System.out.println("Press enter to view next item");
+                String empty = scan.nextLine();
+
+    }}}
 
     myService.shutdown();
     }

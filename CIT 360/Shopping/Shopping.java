@@ -4,24 +4,17 @@ public class Shopping implements Runnable {
 
     private String item;
     private int endurance;
-    private List list;
 
-    public Shopping(List list, int endurance) {
+    public Shopping(String item, int endurance) {
         this.endurance = endurance;
-        this.list = list;
+        this.item = item;
     }
 
     public void run() {
-        for (Object str : list) {
-            Scanner scan2 = new Scanner(System.in);
 
-            item = (String)str;
-            /*System.out.println("Press enter to view next item");
-            empty = scan2.nextLine();*/
-
-            int count = 1;
+        for (int count = 1; count < endurance; count++) {
             count++;
-            if (count % 8 == 0) {
+            if (endurance % 5 == 0) {
                 try {
                     Thread.sleep(endurance);
                 } catch (InterruptedException e) {
@@ -31,8 +24,10 @@ public class Shopping implements Runnable {
             }
             else {
                 System.out.println("Checking for next item...");
-            }
+            }}
+            if (item != "") {
             System.out.println("-----" + item + "-----");
-        }
-        System.out.println("List complete.");
-    }}
+        } else {
+                System.out.println("List complete; press enter to end program.");
+            }}
+    }
